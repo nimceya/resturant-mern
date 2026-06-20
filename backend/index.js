@@ -20,8 +20,10 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://resturant-app-peach.vercel.app",
+    // origin: "https://resturant-app-peach.vercel.app",
+    origin: "http://localhost:5173",
     credentials: true,
+
   })
 );
 app.use(cookieParser());

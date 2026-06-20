@@ -5,13 +5,13 @@ import upload from "../middlewares/multer.js"
 import { addCategory, deleteCategory, getAllCategories, updateCategory } from "../controllers/categoryController.js";
 const categoryRoutes=express.Router();
 
-//  categoryRoutes.post("/add",adminOnly,upload.single("image"),addCategory);
+categoryRoutes.post("/add",adminOnly,upload.single("image"),addCategory);
 
-categoryRoutes.post(
-  "/add",
-  upload.single("image"),
-  addCategory
-);
+// categoryRoutes.post(
+//   "/add",
+//   upload.single("image"),
+//   addCategory
+// );
 categoryRoutes.put("/update/:id",upload.single("image"),updateCategory);
 categoryRoutes.delete("/delete/:id ",deleteCategory);
 categoryRoutes.get("/all",getAllCategories);
