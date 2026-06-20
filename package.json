@@ -6,7 +6,9 @@
   "scripts": {
     "backend": "npm run dev --prefix backend",
     "frontend": "npm run dev --prefix frontend",
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\" ",
+    "build":"npm install && npm install --prefix frontend --production=false && npm run build --prefix frontend"
+
   },
   "repository": {
     "type": "git",
