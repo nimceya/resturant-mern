@@ -48,8 +48,13 @@ const Cart = () => {
             {cart.items.map((item) => (
               <tr key={item._id} className="border-t hover:bg-gray-50">
                 <td className="py-3 px-4 flex items-center space-x-3">
-                  <img
+                  {/* <img
                     src={item.menuItem.image}
+                    alt={item.menuItem.name}
+                    className="w-12 h-12 rounded object-cover"
+                  /> */}
+                  <img
+                    src={`${import.meta.env.VITE_BASE_URL}${item.menuItem.image}`}
                     alt={item.menuItem.name}
                     className="w-12 h-12 rounded object-cover"
                   />
